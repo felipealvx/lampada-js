@@ -1,5 +1,4 @@
-const ligar = document.getElementById('liga');
-const desliga = document.getElementById('desl');
+const ligaDesl = document.getElementById('ligaDesl');
 const lamp = document.getElementById('lamp');
 
 function isLampBreak(){
@@ -20,9 +19,18 @@ function lampBreak(){
     lamp.src = 'img/quebrada.svg';
   }
 }
+function lampLigDesl() {
+  if (ligaDesl.textContent == 'Ligar'){
+    lampOn();
+    ligaDesl.textContent = 'Desligar';
+  } else {
+    ligaDesl.textContent = 'Ligar'
+    lampOff();
+  }
+}
 
-desliga.addEventListener ('click', lampOff);
-ligar.addEventListener ('click', lampOn);
-lamp.addEventListener ('mouseover', lampOn);
-lamp.addEventListener ('mouseleave', lampOff);
+
+ligaDesl.addEventListener ('click', lampLigDesl);
+//lamp.addEventListener ('mouseover', lampOn);
+//lamp.addEventListener ('mouseleave', lampOff);
 lamp.addEventListener ('dblclick', lampBreak);

@@ -34,7 +34,7 @@ header {
   align-items: center;
 }
 
-#liga, #desl {
+#ligaDesl {
   width: 100px;
   height: 2rem;
   background-color: tomato;
@@ -66,7 +66,7 @@ header {
     flex-direction: column;
     width: 100%;
   }
-  #liga, #desl {
+  #ligaDesl {
     height: 80px;
     width: 100%;
     font-size: 2rem;
